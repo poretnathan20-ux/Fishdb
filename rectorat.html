@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rectorat · Nathan Poret</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-dot"></span>
+    Nathan Poret · Portfolio
+  </a>
+  <div class="nav-links">
+    <a href="index.html"    class="nav-link">CV</a>
+    <a href="veille.html"   class="nav-link">Veille</a>
+    <a href="rectorat.html" class="nav-link active">Rectorat</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="eyebrow">Espace Rectorat</div>
+  <h1>Tableau de synthèse · Épreuve E5</h1>
+  <p>BTS Services Informatiques aux Organisations · Option SLAM · Session 2026<br>
+  Lycée La Châtaigneraie, Le Mesnil-Esnard · Candidat : Poret Nathan</p>
+</div>
+
+<div class="page-body rectorat-body">
+
+  <!-- Téléchargement -->
+  <div class="recto-card">
+    <div class="recto-icon">
+      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+    </div>
+    <div class="recto-info">
+      <h2>Tableau de synthèse des réalisations professionnelles</h2>
+      <p>
+        Document officiel recensant toutes les réalisations professionnelles de Nathan Poret,
+        les compétences mises en œuvre, et leur validation dans le cadre de l'épreuve E5 du BTS SIO option SLAM.
+        Session 2026.
+      </p>
+      <div class="btn-group">
+        <!-- Remplace par le vrai chemin de ton fichier une fois hébergé -->
+        <a class="btn btn-primary" href="NPO_bilanCompetences.xls" download>
+          <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          Télécharger le tableau (.xls)
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Réalisations professionnelles -->
+  <section class="block">
+    <h2 class="block-title">Réalisations professionnelles</h2>
+
+    <style>
+      .real-grid {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+      }
+      .real-card {
+        background: var(--bg2);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 1.2rem 1.4rem;
+        transition: border-color .25s, box-shadow .25s, transform .2s;
+      }
+
+      .real-card--empty {
+        border-style: dashed;
+        opacity: .6;
+      }
+      .real-card a.real-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        text-decoration: none;
+        color: inherit;
+        cursor: default;
+        pointer-events: none;
+      }
+      .real-num {
+        min-width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: var(--accent-light);
+        color: var(--accent);
+        font-family: var(--font-mono);
+        font-size: .72rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .real-body { flex: 1; }
+      .real-title {
+        font-family: var(--font-head);
+        font-size: .97rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: .35rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+      }
+      .real-title svg {
+        width: 13px; height: 13px;
+        color: var(--accent);
+        opacity: .7;
+        flex-shrink: 0;
+      }
+      .real-comp-main {
+        font-size: .72rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: .45rem;
+      }
+      .real-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .3rem;
+      }
+      .real-tag {
+        font-size: .7rem;
+        font-family: var(--font-mono);
+        background: var(--bg3);
+        border: 1px solid var(--border);
+        color: var(--text-sub);
+        padding: .15em .55em;
+        border-radius: 4px;
+      }
+      .real-tag--accent {
+        background: var(--accent-light);
+        border-color: rgba(61,92,65,.25);
+        color: var(--accent);
+      }
+      a.real-tag--accent {
+        text-decoration: none;
+        transition: background .18s, transform .15s, box-shadow .18s;
+        cursor: pointer;
+        pointer-events: all !important;
+      }
+      a.real-tag--accent:hover {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+        transform: translateY(-1px);
+        box-shadow: 0 3px 10px rgba(61,92,65,.22);
+      }
+      a.real-tag--accent:hover svg { fill: #fff; }
+      .real-empty-label {
+        font-size: .85rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+      }
+      .real-empty-label svg { width: 16px; height: 16px; opacity: .4; }
+    </style>
+
+    <div class="real-grid">
+
+      <!-- 1 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">01</div>
+          <div class="real-body">
+            <div class="real-title">Site web en équipe</div>
+            <div class="real-comp-main">Travailler en mode projet · Organiser son développement professionnel</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.3.3" class="real-tag real-tag--accent" title="Voir la compétence B1.3.3">B1.3.3</a>
+              <a href="competence.html?code=B1.4.2" class="real-tag real-tag--accent" title="Voir la compétence B1.4.2">B1.4.2</a>
+              <a href="competence.html?code=B1.6.2" class="real-tag real-tag--accent" title="Voir la compétence B1.6.2">B1.6.2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">02</div>
+          <div class="real-body">
+            <div class="real-title">Réseaux sociaux</div>
+            <div class="real-comp-main">Organiser son développement professionnel</div>
+            <div class="real-tags">
+              <a class="real-tag real-tag--accent" href="competence.html?code=B1.6.3" style="text-decoration:none;pointer-events:all;cursor:pointer;" title="Voir la compétence B1.6.3">↗ B1.6.3 · LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">03</div>
+          <div class="real-body">
+            <div class="real-title">Mise en ligne de site</div>
+            <div class="real-comp-main">Mettre à disposition des utilisateurs un service informatique</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.5.2" class="real-tag real-tag--accent" title="Voir la compétence B1.5.2">B1.5.2</a>
+            </div>
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">04</div>
+          <div class="real-body">
+            <div class="real-title">TP HTML</div>
+            <div class="real-comp-main">Gérer le patrimoine informatique · Développer la présence en ligne</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.1.2" class="real-tag real-tag--accent" title="Voir la compétence B1.1.2">B1.1.2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">05</div>
+          <div class="real-body">
+            <div class="real-title">TP Serveurs VM · Windows Server · Ubuntu · Kali Linux</div>
+            <div class="real-comp-main">Mettre à disposition des utilisateurs un service informatique</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.5.2" class="real-tag real-tag--accent" title="Voir la compétence B1.5.2">B1.5.2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">06</div>
+          <div class="real-body">
+            <div class="real-title">Base de données · SQL · PHPmyadmin</div>
+            <div class="real-comp-main">Gérer le patrimoine informatique · Mettre à disposition des utilisateurs un service informatique</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.1.1" class="real-tag real-tag--accent" title="Voir la compétence B1.1.1">B1.1.1</a>
+              <a href="competence.html?code=B1.5.2" class="real-tag real-tag--accent" title="Voir la compétence B1.5.2">B1.5.2</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="real-card">
+        <div class="real-link">
+          <div class="real-num">07</div>
+          <div class="real-body">
+            <div class="real-title">Certification RGPD</div>
+            <div class="real-comp-main">Gérer le patrimoine informatique · Organiser son développement professionnel</div>
+            <div class="real-tags">
+              <a href="competence.html?code=B1.1.4" class="real-tag real-tag--accent" title="Voir la compétence B1.1.4">B1.1.4</a>
+              <a href="competence.html?code=B1.6.3" class="real-tag real-tag--accent" title="Voir la compétence B1.6.3">B1.6.3</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 — vide -->
+      <div class="real-card real-card--empty">
+        <div class="real-empty-label">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          Réalisation 08 · À compléter
+        </div>
+      </div>
+
+      <!-- 9 — vide -->
+      <div class="real-card real-card--empty">
+        <div class="real-empty-label">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          Réalisation 09 · À compléter
+        </div>
+      </div>
+
+      <!-- 10 — vide -->
+      <div class="real-card real-card--empty">
+        <div class="real-empty-label">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2M12 2s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          Réalisation 10 · À compléter
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  Portfolio de <a href="index.html">Nathan Poret</a> · BTS SIO SLAM · Session 2026 · Lycée La Châtaigneraie
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
